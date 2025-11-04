@@ -1,0 +1,38 @@
+{
+    "loginCredentials": {
+        "username": "Admin",
+        "password": "admin123"
+    },
+    "adminUsers": [
+        {
+            "userRole": "ESS",
+            "employeeName": "Paul Collings",
+            "status": "Enabled",
+            "username": "pauless2025",
+            "password": "Test@123456"
+        },
+        {
+            "userRole": "Admin",
+            "employeeName": "Paul Collings",
+            "status": "Enabled",
+            "username": "pauladmin2025",
+            "password": "Test@123456"
+        }
+    ],
+    "searchCriteria": {
+        "validSearch": {
+            "username": "johndoe2025",
+            "userRole": "ESS",
+            "employeeName": "John Doe",
+            "status": "Enabled"
+        },
+        "partialSearch": {
+            "userRole": "Admin",
+            "status": "Enabled"
+        },
+        "invalidSearch": {
+            "username": "nonexistentuser123",
+            "status": "Enabled"
+        }
+    }
+}
