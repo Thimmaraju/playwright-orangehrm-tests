@@ -1,0 +1,19 @@
+{
+    "loginCredentials": {
+        "username": "Admin",
+        "password": "admin123"
+    },
+    "employeeData": [
+        {
+            "firstName": "John",
+            "middleName": "William",
+            "lastName": "Doe",
+            "employeeId": "EMP001"
+        },
+        {
+            "firstName": "Jane",
+            "lastName": "Smith",
+            "employeeId": "EMP002"
+        }
+    ]
+}
