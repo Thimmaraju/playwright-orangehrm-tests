@@ -1,0 +1,32 @@
+{
+    "validationScenarios": {
+        "requiredFields": {
+            "firstName": "",
+            "lastName": "",
+            "employeeId": ""
+        },
+        "invalidFormats": {
+            "employeeId": "!@#$%",
+            "firstName": "123456",
+            "lastName": "@#$%"
+        },
+        "maxLengthExceeded": {
+            "firstName": "ThisIsAVeryLongFirstNameThatExceedsTheMaximumAllowedLength",
+            "lastName": "ThisIsAVeryLongLastNameThatExceedsTheMaximumAllowedLength",
+            "employeeId": "EMP123456789012345"
+        }
+    },
+    "duplicateData": {
+        "employeeId": "EMP001",
+        "username": "johndoe2025"
+    },
+    "validData": {
+        "firstName": "Robert",
+        "lastName": "Wilson",
+        "employeeId": "EMP2025",
+        "username": "rwilson2025",
+        "password": "Test@2025",
+        "jobTitle": "Software Engineer",
+        "status": "Full-Time"
+    }
+}
