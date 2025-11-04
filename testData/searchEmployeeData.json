@@ -1,0 +1,34 @@
+{
+    "searchScenarios": [
+        {
+            "name": "John Doe",
+            "id": "EMP001",
+            "employmentStatus": "Full-Time",
+            "supervisorName": "Paul Collings",
+            "jobTitle": "Software Engineer"
+        },
+        {
+            "name": "Jane Smith",
+            "id": "EMP002",
+            "employmentStatus": "Part-Time",
+            "supervisorName": "Paul Collings",
+            "jobTitle": "QA Engineer"
+        },
+        {
+            "name": "Mike Johnson",
+            "id": "EMP003",
+            "employmentStatus": "Full-Time",
+            "supervisorName": "Linda Anderson",
+            "jobTitle": "Project Manager"
+        }
+    ],
+    "invalidSearchData": {
+        "invalidId": "INVALID123",
+        "nonExistentName": "XYZ ABC",
+        "specialCharacters": "@#$%"
+    },
+    "partialSearchData": {
+        "partialName": "Joh",
+        "partialId": "EMP"
+    }
+}

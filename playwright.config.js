@@ -14,23 +14,39 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './tests',
-  /* Run tests in files in parallel */
-  fullyParallel: true,
+  /* Run tests in sequence for better stability with the demo site */
+  fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
-  /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
-  /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  /* Retry failed tests up to 2 times */
+  retries: 2,
+  /* Run tests in sequence */
+  workers: 1,
+  timeout: 30000, // 30 seconds timeout
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
-    // baseURL: 'http://localhost:3000',
+    baseURL: 'https://opensource-demo.orangehrmlive.com',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    
+    /* Record video for failed tests */
+    video: 'on-first-retry',
+    
+    /* Capture screenshot on failure */
+    screenshot: 'only-on-failure',
+    
+    /* Set viewport size */
+    viewport: { width: 1280, height: 720 },
+    
+    /* Set actionability timeout */
+    actionTimeout: 15000,
+    
+    /* Wait for page load state */
+    navigationTimeout: 30000
   },
 
   /* Configure projects for major browsers */
